@@ -13,4 +13,10 @@ python () {
 
 EXTRA_USERS_PARAMS = "usermod -p '${ROOT_IMAGE_PASSWORD}' root;"
 
-IMAGE_INSTALL:append = " kernel-modules"
+IMAGE_INSTALL:append = " \
+    kernel-modules \
+    linux-firmware-rtl8851 \
+    usb-modeswitch \
+    wireless-regdb-static \
+    wpa-supplicant \
+"
